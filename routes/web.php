@@ -1,21 +1,33 @@
-
 <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminController;
 
-// 1. Jalur Beranda Katalog (Dari P5)
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
+
+// =========================================================
+// JALUR FRONT-STORE (SISI PEMBELI: P5, P6, P7)
+// =========================================================
 Route::get('/', [ProductController::class, 'index']);
-
-// 2. Jalur Detail Produk Dinamis (Dari P6)
 Route::get('/detail/{id}', [ProductController::class, 'show']);
-
-// 3. Jalur Menampilkan Formulir Checkout sesuai ID Barang (P7)
 Route::get('/checkout/{id}', [ProductController::class, 'checkout']);
-
-// 4. Jalur Memproses Pesanan (P7)
 Route::post('/checkout/proses', [ProductController::class, 'storeTransaction']);
+Route::get('/berhasil/{id}', [ProductController::class, 'success']);
 
-// 5. Jalur Halaman Berhasil & Invoice (P7)
-Route::get('/berhasil/{id}', [ProductController::class, 'success'])
-    ->name('success');
+// =========================================================
+// JALUR BACK-OFFICE / SELLER CENTER (SISI ADMIN: P8 & P9)
+// =========================================================
+
+// Materi P8: Manajemen Pesanan Masuk
+Route::get('/admin/transactions', [AdminController::class, 'transactions']);
+Route::post('/admin/transactions/{id}/status', [AdminController::class, 'updateStatus']);
+
+// Materi P9: Manajemen Katalog Produk & Upload Gambar
+Route::get('/admin/products', [AdminController::class, 'products']);
+Route::get('/admin/products/create', [AdminController::class, 'createProduct']);
+Route::post('/admin/products/store', [AdminController::class, 'storeProduct']);
