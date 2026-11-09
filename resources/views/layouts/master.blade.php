@@ -14,7 +14,7 @@
 
     <!-- 1. HEADER UTAMA TOKO -->
     <header style="background-color: #0f172a; color: white; padding: 18px 48px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 100;">
-        <h2 style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.5px;">🛒 TOKO KELOMPOK KALIAN</h2>
+        <h2 style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.5px;">🛒 GRIYA HERBAL BATIK</h2>
         <nav style="display: flex; align-items: center; gap: 24px;">
             <a href="/" style="color: #cbd5e1; text-decoration: none; font-weight: 600; font-size: 14px; transition: color 0.15s ease;">Katalog Produk</a>
             <!-- TAMBAHAN P8: Pintu menuju Dashboard Admin / Seller Center -->
