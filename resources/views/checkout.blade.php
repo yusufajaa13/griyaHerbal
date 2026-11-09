@@ -48,7 +48,7 @@
         <div style="width: 40%; background-color: white; padding: 25px; border-radius: 8px; border: 1px solid #ccc;">
             <h3 style="margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px;">Ringkasan Pesanan</h3>
             @if ($product->image)
-                <img src="{{ asset('images/' . $product->image) }}" width="100%" style="border-radius: 8px;" alt="{{ $product->name }}">
+                <img src="{{ asset('assets/images/' . $product->image) }}" width="100%" style="border-radius: 8px;" alt="{{ $product->name }}">
             @endif
             <h3 style="margin: 0 0 5px 0; color: #222;">{{ $product->name }}</h3>
             <p style="color: #666; font-size: 14px; margin-top: 0;">Harga Satuan Produk:</p>

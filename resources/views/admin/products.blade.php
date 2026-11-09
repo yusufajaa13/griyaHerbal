@@ -43,7 +43,7 @@
                         <!-- Kolom 1: Thumbnail Foto Produk -->
                         <td style="padding: 16px 20px; vertical-align: middle;">
                             @if ($product->image)
-                                <img src="{{ asset('images/' . $product->image) }}"
+                                <img src="{{ asset('assets/images/' . $product->image) }}"
                                     style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid #e2e8f0; display: block;"
                                     alt="{{ $product->name }}">
                             @else

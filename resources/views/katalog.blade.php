@@ -13,7 +13,7 @@
 
                 <!-- SUNTIKAN GAMBAR -->
                 @if ($product->image)
-                    <img src="{{ asset('images/' . $product->image) }}" width="100%"
+                    <img src="{{ asset('assets/images/' . $product->image) }}" width="100%"
                         style="height: 150px; object-fit: cover; border-radius: 4px;">
                 @else
                     <div

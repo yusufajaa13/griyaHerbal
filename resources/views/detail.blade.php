@@ -15,7 +15,7 @@
         <!-- BAGIAN KIRI: GAMBAR PRODUK -->
         <div style="width: 40%; text-align: center;">
             @if ($product->image)
-            <img src="{{ asset('images/' . $product->image) }}" width="100%" style="border-radius: 8px;" alt="{{ $product->name }}">
+            <img src="{{ asset('assets/images/' . $product->image) }}" width="100%" style="border-radius: 8px;" alt="{{ $product->name }}">
             @else
                 <div style="background:#eee; height:300px; line-height: 300px; border-radius: 8px; color: #888;">Tanpa
                     Gambar</div>
